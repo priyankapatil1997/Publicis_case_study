@@ -1,38 +1,62 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import { productData } from '../data/productData';
-import SideBar from './SideBar';
+import React, { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
+import Layout from "../components/Layout";
+import { categoryData } from '../data/categoryData';
 
-function HomePage() {
+
+const HomePage = () => {
+
+
+    let navigate = useNavigate();
+    const handleClick = (data) => {
+        navigate(`/product/${data}`)
+    }
+
+
     return (
         <Layout>
-            <SideBar />
-           
-                <div className="cards">
-                {productData.map((product, i) => {
-                return (
-                    <div className="card">
-                        <h3 className="product-name">{product.name}</h3>
-                        <div className='container'>
-                            <img src={product.imageURL} />
-                        </div>
-                        <div className="details">
-                            <p className="product-details">{product.description}
-                            </p>
-                        </div>
-                        <div className="button-container">
-                            <h4>`MRP RS ${product.price}`</h4>
-                            <button className="card-button">Buy Now</button>
-                        </div>
-                    </div>
-                           )
-                        })}
-                </div>
+        <section className="home-main">
+            {
+                categoryData.length > 0 ? categoryData.map((e, i) => {
+                    return (
+                        i % 2 == 0 ? <div className="home-row" key={e.id}>
+                            <div className="home-col1">
+                                <div>
+                                    <img src={e.imageUrl} className="image-res" />
+                                </div>
+                            </div>
+                            <div className="home-col2">
+                                <div>
+                                    <h2>{e.name}</h2>
+                                    <p>{e.description}</p>
+                                    <button className="button" onClick={() => handleClick(e.id)}>Explore {e.key}</button>
+                                </div>
+                            </div>
 
-         
+                        </div> :
+                            <div className="home-row" key={e.id}>
+
+                                <div className="home-col2">
+                                    <div>
+                                        <h2>{e.name}</h2>
+                                        <p>{e.description}</p>
+                                        <button className="button" onClick={() => handleClick(e.id)}>Explore {e.key}</button>
+                                    </div>
+                                </div>
+                                <div className="home-col1">
+                                    <div>
+                                        <img src={e.imageUrl} className="image-res" />
+                                    </div>
+                                </div>
+
+                            </div>
+                    )
+                }) : ""
+            }
+        </section>
         </Layout>
-
-    );
+    )
 }
 
 export default HomePage;
+

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import ProductInfo from "./pages/ProductInfo";
+import ProductList from "./pages/ProductList";
 import HomePage from "./pages/HomePage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
@@ -17,7 +17,7 @@ function App() {
           <Route path='/' exact element={<HomePage/>}/>
           <Route path='/login' exact element={<LoginPage/>}/>
           <Route path='/register' exact element={<CartPage/>}/>
-          <Route path='/productinfo' exact element={<ProductInfo/>}/>
+          <Route path='/product' exact element={<ProductList/>}/>
           <Route path='/cart' exact element={<RegisterPage/>}/>   
         </Routes>
       </BrowserRouter>

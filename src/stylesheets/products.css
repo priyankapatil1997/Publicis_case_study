@@ -19,7 +19,7 @@ body{
     display: flex;
     box-shadow: 1px;
     flex-wrap: wrap;
-    position: relative;
+    /* position: relative; */
     left: 250px;
     /* overflow-x: wrap; */
 }
@@ -64,4 +64,15 @@ body{
 .product-img{
     height:150x;
     width:300px;
+}
+
+/*Home Css*/
+
+.home-main{
+    margin: 0px 100px 0px 100px;
+}
+.home-row{
+    display: flex;
+    justify-content: space-evenly
+
 }

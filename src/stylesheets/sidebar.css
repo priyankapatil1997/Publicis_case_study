@@ -38,7 +38,7 @@
 
 #page-content-wrapper {
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     padding: 15px;
 }
 
@@ -50,7 +50,7 @@
 /* Sidebar Styles */
 
 .sidebar-nav {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     width: 250px;
     margin: 0;
