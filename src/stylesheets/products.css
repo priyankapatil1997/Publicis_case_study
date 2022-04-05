@@ -12,13 +12,16 @@ body{
     padding: 10px;
     margin: 10px;
     border: 2px solid black;
-    width:400px;
+    width:350px;
     /* height: 400px; */
 }
 .cards{
     display: flex;
     box-shadow: 1px;
     flex-wrap: wrap;
+    position: relative;
+    left: 250px;
+    /* overflow-x: wrap; */
 }
 .button-container{
     display: flex;
@@ -57,4 +60,8 @@ body{
     color: black;
     border-radius: 5px;
     font-size: 20px;
+}
+.product-img{
+    height:150x;
+    width:300px;
 }
