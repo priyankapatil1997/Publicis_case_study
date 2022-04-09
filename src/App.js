@@ -1,28 +1,58 @@
-import * as React from 'react';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import ProductList from "./pages/ProductList";
-import HomePage from "./pages/HomePage";
-import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage";
-import CartPage from "./pages/CartPage";
-import './stylesheets/layout.css';
-import './stylesheets/products.css';
-import './stylesheets/sidebar.css';
+import React,{useState} from "react"
+import {BrowserRouter, Route,Routes} from "react-router-dom"
+import Home from './component/home/Home';
+import Navbar  from './component/header/Navbar';
+import Login from "./component/registration/Login";
+import Register from "./component/registration/Register";
+import ProductList from "./component/product/ProductList";
+import Cart from "./component/shopping/Cart";
+import PageNotFound from "./component/pagenotfound/PageNotFound"
+import {useDispatch, useSelector} from "react-redux"
+
 
 function App() {
+  const[toggle,setToggle]=useState(false)
+  const handleCart=()=>{
+  setToggle(!toggle)
+  }
+  const handleModal=()=>{
+      setToggle(false)
+  }
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' exact element={<HomePage/>}/>
-          <Route path='/login' exact element={<LoginPage/>}/>
-          <Route path='/register' exact element={<CartPage/>}/>
-          <Route path='/product' exact element={<ProductList/>}/>
-          <Route path='/cart' exact element={<RegisterPage/>}/>   
-        </Routes>
-      </BrowserRouter>
+     <div className={toggle?"main":""}> 
+     {toggle?  <div className="first">
+        <Cart handleModal={handleModal} />
+       </div>:""
+      }
+    <main className="mainlist">
+      <header className="navigation">
+      <Navbar handleCart={handleCart} />
+      </header>
+     
+    
+      <article>
+       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="products/*" element={<ProductList />} />
+        <Route path="product/*" element={<Productt />} />
+        <Route path="login/*" element={<Login />} />
+        <Route path="register/*" element={<Register />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      </article>
+      </main>
+      </div>
+ )
+}
+function Productt() {
+  return (
+    <div>
+      <Routes>
+        <Route path=":id" element={<ProductList />} />
+      </Routes>
     </div>
   );
 }
+
 
 export default App;
