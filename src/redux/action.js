@@ -1,4 +1,4 @@
-import { getAllProduct,categorydata,addData,removeData,updateData} from "./action-type"
+import { getAllProduct,categorydata,addData,removeData,updateData} from "./action-constants"
 import {productData} from "./../data/productData";
 import {categoryData} from "./../data/categoryData";
 

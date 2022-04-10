@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { decreaseProduct, increseProduct } from '../../redux/action';
-import { totalProductPrice } from "../../redux/action-type";
+import { totalProductPrice } from "../../redux/action-constants";
 import { useNavigate } from "react-router-dom"
 import "./cart.css"
 const Cart = ({ handleModal }) => {

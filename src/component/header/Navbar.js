@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux"
 import "./navbar.css"
-import { emptyData, logout } from '../../redux/action-type';
+import { emptyData, logout } from '../../redux/action-constants';
 const Navbar = ({handleCart}) => {
      const count=useSelector(state=>state.cartListData.count)
      const loginCheck=useSelector(state=>state.logoutToggle.logout)

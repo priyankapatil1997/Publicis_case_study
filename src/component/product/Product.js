@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { useParams, useLocation } from "react-router-dom"
 import { addProduct } from "../../redux/action";
-import { totalProductPrice } from "../../redux/action-type";
+import { totalProductPrice } from "../../redux/action-constants";
 import { useNavigate } from "react-router-dom";
 const Product = (props) => {
   const navigate = useNavigate()

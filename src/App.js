@@ -5,7 +5,7 @@ import Navbar  from './component/header/Navbar';
 import Login from "./component/registration/Login";
 import Register from "./component/registration/Register";
 import ProductList from "./component/product/ProductList";
-import Cart from "./component/shopping/Cart";
+import Cart from "./component/Cart/Cart";
 import PageNotFound from "./component/pagenotfound/PageNotFound"
 import {useDispatch, useSelector} from "react-redux"
 
@@ -34,7 +34,7 @@ function App() {
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="products/*" element={<ProductList />} />
-        <Route path="product/*" element={<Productt />} />
+        <Route path="product/*" element={<Product />} />
         <Route path="login/*" element={<Login />} />
         <Route path="register/*" element={<Register />} />
         <Route path="*" element={<PageNotFound />} />
@@ -44,7 +44,7 @@ function App() {
       </div>
  )
 }
-function Productt() {
+function Product() {
   return (
     <div>
       <Routes>

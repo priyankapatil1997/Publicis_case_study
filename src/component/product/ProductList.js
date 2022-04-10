@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import Sidebar from './../sidebar/Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 import{useSelector,useDispatch} from "react-redux"
 import "./product.css";
 import Product from './Product';

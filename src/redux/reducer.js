@@ -1,4 +1,4 @@
-import {totalProductPrice,getAllProduct, categorydata,addData, updateData,removeData,emptyData, logout} from './action-type'
+import {totalProductPrice,getAllProduct, categorydata,addData, updateData,removeData,emptyData, logout} from './action-constants'
 const initialState={
     products:[],
     category:[],
