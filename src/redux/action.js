@@ -33,15 +33,4 @@ export const decreaseProduct=(data)=>{
         payload:data
     }
 }
-// export const loginUser=(data)=>{
-//     return{
-//         type:login,
-//         payload:data
-//     }
-// }
-// export const signupUser=(data)=>{
-//     return{
-//         type:signup,
-//         payload:data
-//     }
-// }
+
