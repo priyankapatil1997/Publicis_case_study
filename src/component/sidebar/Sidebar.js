@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
-import { categoryData } from "./../../data/categoryData";
+import { categoryData } from "./../../mockdata/categoryData";
 import {useParams,useLocation} from "react-router-dom";
 import "./sidebar.css";
 const Sidebar=(props)=>{

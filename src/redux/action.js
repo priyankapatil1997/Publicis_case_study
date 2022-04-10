@@ -1,6 +1,6 @@
 import { getAllProduct,categorydata,addData,removeData,updateData} from "./action-constants"
-import {productData} from "./../data/productData";
-import {categoryData} from "./../data/categoryData";
+import {productData} from "./../mockdata/productData";
+import {categoryData} from "./../mockdata/categoryData";
 
 export const getAllproduct=()=>{
     let list=productData.map((list)=>list={...list,count:1})
